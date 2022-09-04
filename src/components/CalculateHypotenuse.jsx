@@ -21,7 +21,7 @@ export default function CalculateHypotenuse() {
   }
   return (
     <>
-      <form onSubmit={submitHandler}>
+      <form className="form" onSubmit={submitHandler}>
         <label htmlFor="base">
           Base
           <input

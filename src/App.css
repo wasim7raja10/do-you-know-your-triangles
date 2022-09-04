@@ -5,11 +5,15 @@
 }
 
 .App {
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
 }
 
 h1 {
   text-align: center;
+  margin: 1rem;
 }
 
 nav > ol {
@@ -21,9 +25,60 @@ nav > ol {
 
 nav > ol li {
   padding: 10px;
-  background-color: aqua;
+  border: 1px solid black;
+}
+
+nav > ol li:hover {
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+}
+
+nav > ol li.active {
+  background-color: black;
+  color: white;
 }
 
 main {
+  padding: 1rem 0;
+}
+
+/* caculate area */
+
+.form {
+  border: 1px solid black;
   padding: 1rem;
+  width: 100%;
+}
+
+.form,
+.form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label, .form p {
+  gap: 5px;
+  font-size: larger;
+  margin-bottom: 1rem;
+}
+
+.form input {
+  padding: 0.5rem;
+}
+
+.form button {
+  padding: 0.5rem;
+  background-color: white;
+}
+
+button:hover,
+button:focus {
+  background-color: black;
+  color: white;
+}
+
+h3 {
+  font-size: xx-large;
+  padding: 1rem 0;
 }

@@ -20,7 +20,7 @@ export default function CalculateArea() {
   }
   return (
     <>
-      <form onSubmit={submitHandler}>
+      <form className="form" onSubmit={submitHandler}>
         <label htmlFor="base">
           Base
           <input

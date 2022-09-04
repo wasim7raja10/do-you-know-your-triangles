@@ -43,9 +43,9 @@ export default function IsTraingle() {
   }
   return (
     <>
-      <form onSubmit={onSubmitHandler}>
-        <div>
-          <label htmlFor="angleOne">Angle 1</label>
+      <form className="form" onSubmit={onSubmitHandler}>
+        <label htmlFor="angleOne">
+          Angle 1
           <input
             onChange={inputChangeHandler}
             type="number"
@@ -53,9 +53,9 @@ export default function IsTraingle() {
             name="angleOne"
             id="angleOne"
           />
-        </div>
-        <div>
-          <label htmlFor="angleTwo">Angle 2</label>
+        </label>
+        <label htmlFor="angleTwo">
+          Angle 2
           <input
             onChange={inputChangeHandler}
             type="number"
@@ -63,9 +63,9 @@ export default function IsTraingle() {
             name="angleTwo"
             id="angleTwo"
           />
-        </div>
-        <div>
-          <label htmlFor="angleThree">Angle 3</label>
+        </label>
+        <label htmlFor="angleThree">
+          Angle 3
           <input
             onChange={inputChangeHandler}
             type="number"
@@ -73,24 +73,26 @@ export default function IsTraingle() {
             value={angles.angleThree}
             id="angleThree"
           />
-        </div>
+        </label>
         <button type="submit">is Triangle?</button>
         <h3>{result}</h3>
       </form>
 
-      <form onSubmit={onSecondSubmitHandler}>
+      <form className="form" onSubmit={onSecondSubmitHandler}>
         <div>
           <p>Angle 1: 45</p>
           <p>Angle 2: 55</p>
           <p></p>
-          <label htmlFor="missingAngle">Missing Angle</label>
-          <input
-            onChange={missingAngleChangeHandler}
-            type="number"
-            value={missingAngle}
-            name="missingAngle"
-            id="missingAngle"
-          />
+          <label htmlFor="missingAngle">
+            Missing Angle
+            <input
+              onChange={missingAngleChangeHandler}
+              type="number"
+              value={missingAngle}
+              name="missingAngle"
+              id="missingAngle"
+            />
+          </label>
         </div>
         <button type="submit">is Triangle?</button>
         <h3>{resultSecond}</h3>
