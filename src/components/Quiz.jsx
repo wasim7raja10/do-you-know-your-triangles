@@ -35,7 +35,7 @@ export default function Quiz() {
                 name="question1"
                 onChange={onValueChange}
               />
-              45
+              45°
             </label>
           </div>
           <div className="radio">
@@ -46,7 +46,7 @@ export default function Quiz() {
                 name="question1"
                 onChange={onValueChange}
               />
-              90
+              90°
             </label>
           </div>
           <div className="radio">
@@ -57,7 +57,7 @@ export default function Quiz() {
                 name="question1"
                 onChange={onValueChange}
               />
-              60
+              60°
             </label>
           </div>
         </div>
