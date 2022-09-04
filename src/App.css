@@ -1,3 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .App {
+text-align: center;
+}
+
+h1 {
   text-align: center;
+}
+
+nav > ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+nav > ol li {
+  padding: 10px;
+  background-color: aqua;
+}
+
+main {
+  padding: 1rem;
 }
