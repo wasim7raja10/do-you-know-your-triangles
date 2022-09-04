@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { validateInput } from "../helper/helperfunctions";
 
 export default function IsTraingle() {
   const [result, setResult] = useState("");
@@ -18,6 +19,10 @@ export default function IsTraingle() {
   }
   function onSubmitHandler(e) {
     e.preventDefault();
+    if (!validateInput(angles.angleOne, angles.angleTwo, angles.angleThree)) {
+      setResult("Invalid input value");
+      return;
+    }
     const sum =
       Number(angles.angleOne) +
       Number(angles.angleTwo) +
@@ -33,6 +38,10 @@ export default function IsTraingle() {
   }
   function onSecondSubmitHandler(e) {
     e.preventDefault();
+    if (!validateInput(missingAngle)) {
+      setResultSecond("Invalid input value");
+      return;
+    }
     const sum = 45 + 55 + Number(missingAngle);
     if (sum === 180 && Number(missingAngle) !== 0)
       setResultSecond("Its a valid triangle");

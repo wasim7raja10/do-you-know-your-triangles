@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { validateInput } from "../helper/helperfunctions";
 
 export default function CalculateHypotenuse() {
   const [hypo, setHypo] = useState("");
@@ -14,6 +15,10 @@ export default function CalculateHypotenuse() {
   }
   function submitHandler(e) {
     e.preventDefault();
+    if(!validateInput(dimension.base, dimension.height)) {
+      setHypo("Invalid input value")
+      return
+    }
     const hypo = Math.sqrt(
       Number(dimension.base) ** 2 + Number(dimension.height) ** 2
     ).toFixed(2);

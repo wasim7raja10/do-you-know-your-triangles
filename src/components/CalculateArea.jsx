@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { validateInput } from "../helper/helperfunctions";
 
 export default function CalculateArea() {
   const [dimension, setDimension] = useState({
@@ -15,8 +16,16 @@ export default function CalculateArea() {
   }
   function submitHandler(e) {
     e.preventDefault();
-    const area = (1/2 * Number(dimension.base) * Number(dimension.height)).toFixed(2)
-    setArea(area)
+    if (!validateInput(dimension.base, dimension.height)) {
+      setArea("Invalid input value");
+      return;
+    }
+    const area = (
+      (1 / 2) *
+      Number(dimension.base) *
+      Number(dimension.height)
+    ).toFixed(2);
+    setArea(area);
   }
   return (
     <>

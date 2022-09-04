@@ -5,7 +5,7 @@ export default function Quiz() {
     question1: "",
     question2: "",
   });
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState("");
   function submitHandler(e) {
     e.preventDefault();
     let score = 0;
