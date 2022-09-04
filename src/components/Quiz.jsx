@@ -21,7 +21,7 @@ export default function Quiz() {
   }
   return (
     <>
-      <form className="" onSubmit={submitHandler}>
+      <form className="quiz" onSubmit={submitHandler}>
         <div className="question1">
           <p>
             What is the third angle for the triangle where angle1 = 45° and

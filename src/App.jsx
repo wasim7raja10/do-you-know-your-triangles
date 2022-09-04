@@ -6,7 +6,7 @@ import IsTraingle from "./components/IsTraingle";
 import Quiz from "./components/Quiz";
 
 function App() {
-  const [tab, setTab] = useState("tab1");
+  const [tab, setTab] = useState("tab3");
   return (
     <div className="App">
       <h1>Everything Traingle</h1>
